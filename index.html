@@ -1,0 +1,622 @@
+<!doctype html>
+<html class="no-js" lang="ru" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ЯХК - Корзина</title>
+	<link rel="stylesheet" href="vendor/foundation/css/foundation.css">
+	<link rel="stylesheet" href="vendor/foundation/css/app.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<div class="large-12 cell">
+					<div class="header_wrap">
+						<div class="logo">
+							<a href="#"><img src="img/logo.png" alt="ЯХК"></a>
+						</div>
+						<div class="header_menu">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Информация</a></li>
+								<li><a href="#">Мои данные</a></li>
+								<li><a href="#">История заказов</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="header_clear">
+
+						</div>
+						<div class="header_log">
+							<div class="header_log_block">
+								<a class="login" href="#"><img src="img/login.png" alt=""></a>
+								<span>И.П. Дьячковский А.М.</span>
+							</div>
+							<a class="logout" href="#">Выйти</a>
+						</div>
+						<div class="burger">
+							<a href="#" data-toggle="offCanvas"><img src="img/burger.png" alt=""> </a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_canvas">
+			<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+				<ul class="vertical menu">
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Информация</a></li>
+					<li><a href="#">Мои данные</a></li>
+					<li><a href="#">История заказов</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="wrap_opt">
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<!-- левый -->
+				<div class="medium-12 large-6 cell">
+					<div class="product_wrap">
+						<div class="product_title">
+							<ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs">
+								<li class="tabs-title is-active"><a href="#panel1c" aria-selected="true">Продукция ЯХК</a></li>
+								<li class="tabs-title cart_2"><a href="#panel3a" aria-selected="true">Корзина заказа <span class="product_col">7</span></a></li>
+								<li class="tabs-info"><span>Цены указаны от 16.07.2018 г.</span></li>
+							</ul>
+						</div>
+						<div class="tabs-content table-scroll" data-tabs-content="collapsing-tabs">
+							<div class="tabs-panel is-active" id="panel1c">
+								<div class="product_desc">
+									<table class="product_table_name">
+										<tbody class="product_table_name_main">
+											<tr>
+												<td>Наименование</td>
+												<td>Срок хранения</td>
+												<td>Цена</td>
+												<td>Мин. отрузка</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="product_accordion">
+									<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+										<li class="accordion-item is-active" data-accordion-item>
+											<a href="#" class="accordion-title">Хлеб</a>
+
+											<!-- мобильный -->
+											<div class="accordion-content accordion_mobile" data-tab-content>
+												<div class="product_mob_block">
+													<div class="product_mob_inner">
+														<div class="product_mob_img">
+															<img src="img/product.png" alt="">
+														</div>
+														<div class="product_mob_desc">
+															<h3>Хлеб “Пшеничный” 1 сорт 0,6 кг (в упаковке с нарезкой)</h3>
+															<div class="product_mob_meta">
+																<span>Срок хранения <b>36 суток</b></span>
+																<span>Мин. отгрузка <b>14 шт.</b></span>
+															</div>
+														</div>
+													</div>
+													<div class="product_mob_price">
+														<span>Цена 42,64 руб</span>
+														<a href="#">В корзину</a>
+													</div>
+												</div>
+												<div class="product_mob_block">
+													<div class="product_mob_inner">
+														<div class="product_mob_img">
+															<img src="img/product.png" alt="">
+														</div>
+														<div class="product_mob_desc">
+															<h3>Хлеб “Пшеничный” 1 сорт 0,6 кг (в упаковке с нарезкой)</h3>
+															<div class="product_mob_meta">
+																<span>Срок хранения <b>36 суток</b></span>
+																<span>Мин. отгрузка <b>14 шт.</b></span>
+															</div>
+														</div>
+													</div>
+													<div class="product_mob_price">
+														<span>Цена 42,64 руб</span>
+														<a href="#">В корзину</a>
+													</div>
+												</div>
+											</div>
+
+											<!-- destkop -->
+											<div class="accordion-content accordion_destkop" data-tab-content>
+												<table class="product_table_name ">
+													<tbody>
+														<tr id="panel1" class="accordion-item is-active" data-accordion-item data-toggler data-animate="slide-in-right slide-out-right">
+															<td>Хлеб “Дарницкий” 0,65 кг.</td>
+															<td>36 часов</td>
+															<td>42,61 руб</td>
+															<td>14 шт.</td>
+															<td><a data-toggle="panel1 panel4" href="#">В Корзину</a></td>
+														</tr>
+														<tr id="panel2" class="accordion-item is-active" data-accordion-item data-toggler data-animate="slide-in-right slide-out-right">
+															<td>Хлеб “Дарницкий” 0,65 кг. (в упаковке с нарезкой)</td>
+															<td>4 суток</td>
+															<td>46,09 руб</td>
+															<td>14 шт.</td>
+															<td><a data-toggle="panel2 panel5" href="#">В Корзину</a></td>
+														</tr>
+														<tr id="panel3" class="accordion-item is-active" data-accordion-item data-toggler data-animate="slide-in-right slide-out-right">
+															<td>Хлеб “Дарницкий” 0,65 кг. (в упаковке)</td>
+															<td>4 суток</td>
+															<td>43,48 руб</td>
+															<td>14 шт.</td>
+															<td><a data-toggle="panel3 panel6" href="#">В Корзину</a></td>
+														</tr>
+														<tr style="display:none" id="panel12" class="accordion-item is-active" data-accordion-item data-toggler data-animate="slide-in-right slide-out-right">
+															<td>Хлеб “Дарницкий” 0,65 кг. (в упаковке)</td>
+															<td>4 суток</td>
+															<td>43,48 руб</td>
+															<td>14 шт.</td>
+															<td><a data-toggle="panel11 panel12" href="#">В Корзину</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</li>
+										<li class="accordion-item is-active" data-accordion-item>
+											<a href="#" class="accordion-title">Хлеб</a>
+
+											<!-- мобильный -->
+											<div class="accordion-content accordion_mobile" data-tab-content>
+												<div class="product_mob_block">
+													<div class="product_mob_inner">
+														<div class="product_mob_img">
+															<img src="img/product.png" alt="">
+														</div>
+														<div class="product_mob_desc">
+															<h3>Хлеб “Пшеничный” 1 сорт 0,6 кг (в упаковке с нарезкой)</h3>
+															<div class="product_mob_meta">
+																<span>Срок хранения <b>36 суток</b></span>
+																<span>Мин. отгрузка <b>14 шт.</b></span>
+															</div>
+														</div>
+													</div>
+													<div class="product_mob_price">
+														<span>Цена 42,64 руб</span>
+														<a href="#">В корзину</a>
+													</div>
+												</div>
+												<div class="product_mob_block">
+													<div class="product_mob_inner">
+														<div class="product_mob_img">
+															<img src="img/product.png" alt="">
+														</div>
+														<div class="product_mob_desc">
+															<h3>Хлеб “Пшеничный” 1 сорт 0,6 кг (в упаковке с нарезкой)</h3>
+															<div class="product_mob_meta">
+																<span>Срок хранения <b>36 суток</b></span>
+																<span>Мин. отгрузка <b>14 шт.</b></span>
+															</div>
+														</div>
+													</div>
+													<div class="product_mob_price">
+														<span>Цена 42,64 руб</span>
+														<a href="#">В корзину</a>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-content accordion_destkop" data-tab-content>
+												<table class="product_table_name">
+													<tbody>
+														<tr id="panel9" class="accordion-item is-active" data-accordion-item data-toggler data-animate="slide-in-right slide-out-right">
+															<td>Хлеб “Дарницкий” 0,65 кг. (в упаковке)</td>
+															<td>4 суток</td>
+															<td>43,48 руб</td>
+															<td>14 шт.</td>
+															<td><a data-toggle="panel9 panel10" href="#">В Корзину</a></td>
+														</tr>
+														<tr style="display:none" id="panel8" class="accordion-item is-active" data-accordion-item data-toggler data-animate="slide-in-right slide-out-right">
+															<td>Хлеб “Дарницкий” 0,65 кг. (в упаковке)</td>
+															<td>4 суток</td>
+															<td>43,48 руб</td>
+															<td>14 шт.</td>
+															<td><a data-toggle="panel8 panel7" href="#">В Корзину</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="tabs-panel" id="panel3a">
+								<div class="product_desc">
+									<table class="product_table_name">
+										<tbody class="product_table_name_main">
+											<tr>
+												<td>Наименование</td>
+												<td>Цена</td>
+												<td>Кол-во</td>
+												<td class="cart_col">Сумма</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="cart_accordion">
+									<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+										<li class="accordion-item is-active" data-accordion-item>
+											<a href="#" class="accordion-title">Хлеб</a>
+											<!-- мобильный -->
+											<div class="accordion-content accordion_mobile" data-tab-content>
+												<div class="product_mob_block">
+													<div class="product_mob_inner">
+														<div class="product_mob_img">
+															<img src="img/product.png" alt="">
+														</div>
+														<div class="product_mob_desc">
+															<h3>Хлеб “Пшеничный” 1 сорт 0,6 кг (в упаковке с нарезкой)</h3>
+															<div class="product_mob_meta">
+																<span>Срок хранения <b>36 суток</b></span>
+																<span>Мин. отгрузка <b>14 шт.</b></span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="product_mob_block">
+													<div class="product_mob_inner">
+														<div class="product_mob_img">
+															<img src="img/product.png" alt="">
+														</div>
+														<div class="product_mob_desc">
+															<h3>Хлеб “Пшеничный” 1 сорт 0,6 кг (в упаковке с нарезкой)</h3>
+															<div class="product_mob_meta">
+																<span>Срок хранения <b>36 суток</b></span>
+																<span>Мин. отгрузка <b>14 шт.</b></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="accordion-content accordion_destkop" data-tab-content>
+												<table class="product_table_name">
+													<tbody>
+														<tr style="display:none" id="panel20" data-toggler data-animate="slide-in-left slide-out-left">
+															<td>Хлеб “Дарницкий” 0,65 кг.</td>
+															<td>36 часов</td>
+															<td>696,54 руб.</td>
+															<td class="cart_col">
+																<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity">
+																	<div class="minus_ico"></div>
+																</button>
+																<div class="cart_col_input">
+																	<input class="input-group-field" type="number" name="quantity" min="0" value="1">
+																</div>
+																<button type="button" class="plus" data-quantity="plus" data-field="quantity">
+																	<div class="plus_ico"></div>
+																</button>
+															</td>
+															<td><a data-toggle="panel1 panel4" href="#">Удалить</a></td>
+														</tr>
+														<tr style="display:none" id="panel21" data-toggler data-animate="slide-in-left slide-out-left">
+															<td>Хлеб “Дарницкий” 0,65 кг. (в упаковке с нарезкой)</td>
+															<td>36 часов</td>
+															<td>696,54 руб.</td>
+															<td class="cart_col">
+																<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
+																	<div class="minus_ico"></div>
+																</button>
+																<div class="cart_col_input">
+																	<input class="input-group-field" type="number" name="quantity1" min="0" value="1">
+																</div>
+																<button type="button" class="plus" data-quantity="plus" data-field="quantity1">
+																	<div class="plus_ico"></div>
+																</button>
+															</td>
+															<td><a data-toggle="panel2 panel5" href="#">Удалить</a></td>
+														</tr>
+														<tr style="display:none" id="panel22" data-toggler data-animate="slide-in-left slide-out-left">
+															<td>Хлеб “Дарницкий” 0,65 кг.</td>
+															<td>36 часов</td>
+															<td>696,54 руб.</td>
+															<td class="cart_col">
+																<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
+																	<div class="minus_ico"></div>
+																</button>
+																<div class="cart_col_input">
+																	<input class="input-group-field" type="number" name="quantity2" min="0" value="1">
+																</div>
+																<button type="button" class="plus" data-quantity="plus" data-field="quantity2">
+																	<div class="plus_ico"></div>
+																</button>
+															</td>
+															<td><a data-toggle="panel3 panel6" href="#">Удалить</a></td>
+														</tr>
+														<tr id="panel23" data-toggler data-animate="slide-in-left slide-out-left">
+															<td>Хлеб “Дарницкий” 0,65 кг.</td>
+															<td>36 часов</td>
+															<td>696,54 руб.</td>
+															<td class="cart_col">
+																<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity3">
+																	<div class="minus_ico"></div>
+																</button>
+																<div class="cart_col_input">
+																	<input class="input-group-field" type="number" name="quantity3" min="0" value="1">
+																</div>
+																<button type="button" class="plus" data-quantity="plus" data-field="quantity3">
+																	<div class="plus_ico"></div>
+																</button>
+															</td>
+															<td><a data-toggle="panel11 panel12" href="#">Удалить</a></td>
+														</tr>
+													</tbody>
+												</table>
+												<span class="product_cart_sum">1 товар, на сумму 42,61 руб.</span>
+											</div>
+										</li>
+										<li class="accordion-item is-active" data-accordion-item>
+											<a href="#" class="accordion-title">Хлеб</a>
+
+											<!-- мобильный -->
+											<div class="accordion-content accordion_mobile" data-tab-content>
+												<div class="product_mob_block">
+													<div class="product_mob_inner">
+														<div class="product_mob_img">
+															<img src="img/product.png" alt="">
+														</div>
+														<div class="product_mob_desc">
+															<h3>Хлеб “Пшеничный” 1 сорт 0,6 кг (в упаковке с нарезкой)</h3>
+															<div class="product_mob_meta">
+																<span>Срок хранения <b>36 суток</b></span>
+																<span>Мин. отгрузка <b>14 шт.</b></span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="product_mob_block">
+													<div class="product_mob_inner">
+														<div class="product_mob_img">
+															<img src="img/product.png" alt="">
+														</div>
+														<div class="product_mob_desc">
+															<h3>Хлеб “Пшеничный” 1 сорт 0,6 кг (в упаковке с нарезкой)</h3>
+															<div class="product_mob_meta">
+																<span>Срок хранения <b>36 суток</b></span>
+																<span>Мин. отгрузка <b>14 шт.</b></span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="accordion-content accordion_destkop" data-tab-content>
+												<table class="product_table_name">
+													<tbody>
+														<tr style="display:none" id="panel27" data-toggler data-animate="slide-in-left slide-out-left">
+															<td>Хлеб “Дарницкий” 0,65 кг.</td>
+															<td>36 часов</td>
+															<td>696,54 руб.</td>
+															<td class="cart_col">
+																<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity5">
+																	<div class="minus_ico"></div>
+																</button>
+																<div class="cart_col_input">
+																	<input class="input-group-field" type="number" name="quantity5" min="0" value="1">
+																</div>
+																<button type="button" class="plus" data-quantity="plus" data-field="quantity5">
+																	<div class="plus_ico"></div>
+																</button>
+															</td>
+															<td><a data-toggle="panel10 panel9" href="#">Удалить</a></td>
+														</tr>
+														<tr id="panel26" data-toggler data-animate="slide-in-left slide-out-left">
+															<td>Хлеб “Дарницкий” 0,65 кг.</td>
+															<td>36 часов</td>
+															<td>696,54 руб.</td>
+															<td class="cart_col">
+																<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity4">
+																	<div class="minus_ico"></div>
+																</button>
+																<div class="cart_col_input">
+																	<input class="input-group-field" type="number" name="quantity4" min="0" value="1">
+																</div>
+																<button type="button" class="plus" data-quantity="plus" data-field="quantity4">
+																	<div class="plus_ico"></div>
+																</button>
+															</td>
+															<td><a data-toggle="panel8 panel7" href="#">Удалить</a></td>
+														</tr>
+													</tbody>
+												</table>
+												<span class="product_cart_sum">1 товар, на сумму 42,61 руб.</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="cart_total_inner">
+									<span class="cart_total_sum">7 товаров, на сумму 352,45 руб.</span>
+									<a href="#">Оформить заказ</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="medium-12 large-6 cell cart_inner">
+					<div class="cart_wrap">
+						<div class="product_title">
+							<ul class="tabs" data-active-collapse="true" data-tabs id="collapsing-tabs2">
+								<li class="tabs-title is-active"><a href="#panel2a" aria-selected="true">Корзина заказа <span class="product_col">7</span></a></li>
+								<li class="tabs-info"><a href="#">Распечатать</a></li>
+								<li class="tabs-info"><a data-toggle="panel30" href="#">Очистить корзину</a> </li>
+							</ul>
+						</div>
+						<div class="tabs-content" data-tabs-content="collapsing-tabs2">
+							<div class="tabs-panel is-active" id="panel2a">
+								<div class="product_desc">
+									<table class="product_table_name">
+										<tbody class="product_table_name_main">
+											<tr>
+												<td>Наименование</td>
+												<td>Цена</td>
+												<td>Кол-во</td>
+												<td class="cart_col">Сумма</td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="cart_accordion">
+									<div class="cart_accordion_inner" id="panel30" data-toggler data-animate="slide-in-right slide-out-right">
+										<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+											<li class="accordion-item is-active" data-accordion-item>
+												<a href="#" class="accordion-title">Хлеб</a>
+
+												<div class="accordion-content" data-tab-content>
+													<table class="product_table_name">
+														<tbody>
+															<tr style="display:none" id="panel4" data-toggler data-animate="slide-in-left slide-out-left">
+																<td>Хлеб “Дарницкий” 0,65 кг.</td>
+																<td>36 часов</td>
+																<td>696,54 руб.</td>
+																<td class="cart_col">
+																	<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity">
+																		<div class="minus_ico"></div>
+																	</button>
+																	<div class="cart_col_input">
+																		<input class="input-group-field" type="number" name="quantity" min="0" value="1">
+																	</div>
+																	<button type="button" class="plus" data-quantity="plus" data-field="quantity">
+																		<div class="plus_ico"></div>
+																	</button>
+																</td>
+																<td><a data-toggle="panel1 panel4" href="#">Удалить</a></td>
+															</tr>
+															<tr style="display:none" id="panel5" data-toggler data-animate="slide-in-left slide-out-left">
+																<td>Хлеб “Дарницкий” 0,65 кг. (в упаковке с нарезкой)</td>
+																<td>36 часов</td>
+																<td>696,54 руб.</td>
+																<td class="cart_col">
+																	<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity1">
+																		<div class="minus_ico"></div>
+																	</button>
+																	<div class="cart_col_input">
+																		<input class="input-group-field" type="number" name="quantity1" min="0" value="1">
+																	</div>
+																	<button type="button" class="plus" data-quantity="plus" data-field="quantity1">
+																		<div class="plus_ico"></div>
+																	</button>
+																</td>
+																<td><a data-toggle="panel2 panel5" href="#">Удалить</a></td>
+															</tr>
+															<tr style="display:none" id="panel6" data-toggler data-animate="slide-in-left slide-out-left">
+																<td>Хлеб “Дарницкий” 0,65 кг.</td>
+																<td>36 часов</td>
+																<td>696,54 руб.</td>
+																<td class="cart_col">
+																	<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity2">
+																		<div class="minus_ico"></div>
+																	</button>
+																	<div class="cart_col_input">
+																		<input class="input-group-field" type="number" name="quantity2" min="0" value="1">
+																	</div>
+																	<button type="button" class="plus" data-quantity="plus" data-field="quantity2">
+																		<div class="plus_ico"></div>
+																	</button>
+																</td>
+																<td><a data-toggle="panel3 panel6" href="#">Удалить</a></td>
+															</tr>
+															<tr id="panel11" data-toggler data-animate="slide-in-left slide-out-left">
+																<td>Хлеб “Дарницкий” 0,65 кг.</td>
+																<td>36 часов</td>
+																<td>696,54 руб.</td>
+																<td class="cart_col">
+																	<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity3">
+																		<div class="minus_ico"></div>
+																	</button>
+																	<div class="cart_col_input">
+																		<input class="input-group-field" type="number" name="quantity3" min="0" value="1">
+																	</div>
+																	<button type="button" class="plus" data-quantity="plus" data-field="quantity3">
+																		<div class="plus_ico"></div>
+																	</button>
+																</td>
+																<td><a data-toggle="panel11 panel12" href="#">Удалить</a></td>
+															</tr>
+														</tbody>
+													</table>
+													<span class="product_cart_sum">1 товар, на сумму 42,61 руб.</span>
+												</div>
+											</li>
+											<li class="accordion-item is-active" data-accordion-item>
+												<a href="#" class="accordion-title">Хлеб</a>
+
+												<div class="accordion-content" data-tab-content>
+													<table class="product_table_name">
+														<tbody>
+															<tr style="display:none" id="panel10" data-toggler data-animate="slide-in-left slide-out-left">
+																<td>Хлеб “Дарницкий” 0,65 кг.</td>
+																<td>36 часов</td>
+																<td>696,54 руб.</td>
+																<td class="cart_col">
+																	<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity5">
+																		<div class="minus_ico"></div>
+																	</button>
+																	<div class="cart_col_input">
+																		<input class="input-group-field" type="number" name="quantity5" min="0" value="1">
+																	</div>
+																	<button type="button" class="plus" data-quantity="plus" data-field="quantity5">
+																		<div class="plus_ico"></div>
+																	</button>
+																</td>
+																<td><a data-toggle="panel10 panel9" href="#">Удалить</a></td>
+															</tr>
+															<tr id="panel7" data-toggler data-animate="slide-in-left slide-out-left">
+																<td>Хлеб “Дарницкий” 0,65 кг.</td>
+																<td>36 часов</td>
+																<td>696,54 руб.</td>
+																<td class="cart_col">
+																	<button type="button" class="minus disabled" data-quantity="minus" data-field="quantity4">
+																		<div class="minus_ico"></div>
+																	</button>
+																	<div class="cart_col_input">
+																		<input class="input-group-field" type="number" name="quantity4" min="0" value="1">
+																	</div>
+																	<button type="button" class="plus" data-quantity="plus" data-field="quantity4">
+																		<div class="plus_ico"></div>
+																	</button>
+																</td>
+																<td><a data-toggle="panel8 panel7" href="#">Удалить</a></td>
+															</tr>
+														</tbody>
+													</table>
+													<span class="product_cart_sum">1 товар, на сумму 42,61 руб.</span>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="cart_total_inner">
+									<span class="cart_total_sum">7 товаров, на сумму 352,45 руб.</span>
+									<a href="#">Оформить заказ</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="vendor/foundation/js/vendor/jquery.js"></script>
+	<script src="vendor/foundation/js/vendor/what-input.js"></script>
+	<script src="vendor/foundation/js/vendor/foundation.js"></script>
+	<script src="vendor/foundation/js/app.js"></script>
+	<script src="main.js"></script>
+</body>
+
+</html>
