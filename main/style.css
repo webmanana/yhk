@@ -1,0 +1,338 @@
+@font-face {
+	font-family: 'Gotham';
+	src: url('vendor/fonts/GothamPro.eot');
+	src: url('vendor/fonts/GothamPro.eot?#iefix') format('embedded-opentype'),
+	url('vendor/fonts/GothamPro.woff') format('woff'),
+	url('vendor/fonts/GothamPro.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Gotham';
+	src: url('vendor/fonts/GothamPro-Bold.eot');
+	src: url('vendor/fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+	url('vendor/fonts/GothamPro-Bold.woff') format('woff'),
+	url('vendor/fonts/GothamPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Vollkorn';
+	src: url('vendor/fonts/Vollkorn-Regular.eot');
+	src: url('vendor/fonts/Vollkorn-Regular.eot?#iefix') format('embedded-opentype'),
+	url('vendor/fonts/Vollkorn-Regular.woff') format('woff'),
+	url('vendor/fonts/Vollkorn-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Vollkorn';
+	src: url('vendor/fonts/Vollkorn-Bold.eot');
+	src: url('vendor/fonts/Vollkorn-Bold.eot?#iefix') format('embedded-opentype'),
+	url('vendor/fonts/Vollkorn-Bold.woff') format('woff'),
+	url('vendor/fonts/Vollkorn-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 14px;
+	font-family: "Gotham", sans-serif;
+	color: #000;
+}
+ul, ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+.wrapper {
+	background-color: #FAF7F2;
+	padding-bottom: 100px;
+}
+.container {
+	max-width: 1160px;
+	margin: 0 auto;
+	width: 100%;
+}
+.orange {
+	color: #ED5408;
+}
+/* header */
+header {
+	border-bottom: 1px solid #EDEAE4;
+}
+.header_wrap {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	color: #837873;
+	align-items: center;
+}
+.header_wrap a {
+	color: #837873;
+}
+.header_wrap a:hover {
+	color: #F15C0B;
+}
+.header_search {
+	width: 15%;
+}
+.header_top_left, .header_top_right {
+	width: 30%;
+}
+.header_top_left ul, .header_top_right ul {
+	display: flex;
+	flex-direction: row;
+}
+.header_top_left ul li a {
+	margin-left: 30px;
+}
+.header_top_left ul li:first-child a {
+	margin-left: 0;
+}
+.logo {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 10%;
+}
+.header_top_right ul li a {
+	margin-right: 30px;
+}
+.header_top_right ul li:last-child a {
+	margin-right: 0;
+}
+.header_log {
+	display: flex;
+	flex-direction: row;
+	width: 15%;
+	justify-content: flex-end;
+}
+.search_block {
+	display: flex;
+	flex-direction: row;
+}
+.search_block input[type=submit] {
+	width: 15px;
+	height: 16px;
+	text-indent: -99em;
+	background-image: url(./img/search.svg);
+	box-shadow: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	padding: 0;
+	margin-right: 10px;
+	background-color: transparent;
+}
+.search_block input[type=text] {
+	border: none;
+	background-color: transparent;
+	outline: none;
+	width: 130px;
+}
+.header_log_block {
+	position: relative;
+}
+.header_log_block a {
+	position: absolute;
+	left: -22px;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.header_log_block a:hover + span {
+	color: #F15C0B;
+}
+/* page */
+.breadcrumb {
+	margin-top: 30px;
+}
+.breadcrumb_inner a {
+	color: #C4C4C4;
+	font-size: 13px;
+}
+.page_title h1 {
+	color: #F15C0B;
+	font-size: 24px;
+	line-height: 23px;
+	margin-bottom: 25px;
+}
+.page_img {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.career {
+	margin-bottom: 50px;
+}
+.page_desc .content {
+	border-radius: 0 0 10px 10px;
+}
+.content {
+	background-color: #fff;
+	padding: 30px;
+	line-height: 24px;
+	color: #222;
+}
+.content p {
+	margin-top: 0;
+	margin-bottom: 25px;
+}
+.content ul {
+	margin-top: 15px;
+}
+.career .content ul li {
+	position: relative;
+	padding-left: 40px;
+	margin-bottom: 10px;
+}
+.career .content ul li:before {
+    content: "";
+    display: block;
+    width: 17px;
+    height: 15px;
+    background-image: url(./img/ok.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+	top: 7px;
+}
+.accordion-title::before {
+	content: "Показать";
+	font-weight: normal;
+	color: #707070;
+	font-size: 13px;
+}
+.is-active > .accordion-title::before {
+    content: 'Свернуть';
+}
+.accordion-title {
+	border: none;
+	background-color: transparent;
+	color: #F15C0B;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 30px;
+}
+.accordion-content {
+	border: none;
+	padding: 30px;
+}
+.accordion-title:hover, .accordion-title:focus {
+    background-color: transparent;
+}
+.content ul.accordion {
+	margin: 0;
+}
+.accordion-item {
+	border-bottom: 1px solid #EEEEEE;
+}
+.accordion-item:first-child a {
+	border-radius: 10px 10px 0 0!important;
+}
+.accordion {
+	border-radius: 10px;
+}
+.vakansii {
+	padding-bottom: 60px;
+}
+:last-child > .accordion-content:last-child, :last-child:not(.is-active) > .accordion-title, .accordion-item:last-child {
+	border: none;
+}
+/* company */
+.company_title h1 {
+    color: #F15C0B;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    font-weight: normal;
+    margin-top: 15px;
+    margin-bottom: 15px;
+	font-family: 'Vollkorn', sans-serif;
+}
+.company_url {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+.company_url a {
+	color: #222;
+	font-size: 22px;
+	font-weight: bold;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.company_url a.active {
+	border-bottom: 3px solid #ED5408;
+	color: #ED5408;
+}
+.bulka1 {
+	display: flex;
+	flex-direction: row;
+}
+.bulka1_desc span {
+    color: #ED5408;
+    font-family: 'Gotham Pro', sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    line-height: normal;
+}
+.bulka1_desc p {
+	color: #4F4F4F;
+	margin: 0;
+}
+.bulka1_desc {
+	padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.content h3 {
+	color: #ED5408;
+	font-size: 24px;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+.bulka_inner {
+	display: flex;
+	flex-direction: row;
+}
+.bulka2_desc {
+	display: flex;
+	flex-direction: column;
+	padding-top: 53px;
+}
+.bulka2_text {
+	color: #ED5408;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 0;
+}
+.bulka2_sifra {
+	font-size: 72px;
+	font-weight: bold;
+	line-height: normal;
+	color: #ED5408;
+}
+.bulka2 {
+	display: flex;
+	flex-direction: row;
+}
+.shadow {
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+.about_desc .content {
+	border-radius: 10px;
+}
+.about_desc {
+	margin-bottom: 50px;
+}
+.history_inner .content {
+	border-radius: 10px;
+}
