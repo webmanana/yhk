@@ -56,6 +56,7 @@ a {
 	padding-bottom: 100px;
 	min-height: 100vh;
 	z-index: 11;
+	position: relative;
 }
 .container {
 	max-width: 1160px;
@@ -752,12 +753,23 @@ header {
 .map-container {
 	border-radius: 0 0 10px 10px!important;
 }
+.main_number_inner {
+	position: relative;
+}
 .main_number_back {
-	background-image: url(./img/main_number_back.png);
-	background-repeat: no-repeat;
-	height: 310px;
-	width: 100%;
-	background-size: cover;
+    background-repeat: no-repeat;
+    height: 190px;
+    width: 100%;
+    position: absolute;
+    top: -187px;
+    left: auto;
+    right: 0;
+    z-index: 111;
+
+}
+.main_number_back img {
+	-webkit-filter: drop-shadow(0px 10px 60px rgba(0, 0, 0, 0.1));
+	filter: drop-shadow(0px 10px 60px rgba(0, 0, 0, 0.1));
 }
 .main_top_inner {
 	position: relative;
@@ -785,4 +797,86 @@ header {
 	color: #837873;
 	font-size: 13px;
 	line-height: 24px;
+}
+.main_number_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.main_number_block {
+    padding-top: 24px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_number_block span {
+    font-family: "Vollkorn", sans-serif;
+    color: #ED5408;
+    font-size: 72px;
+    line-height: 80px;
+    font-feature-settings: 'tnum' on, 'lnum' on;
+}
+.main_number_block p {
+    color: #837873;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+    text-align: center;
+}
+.assortiment {
+	margin-top: 80px;
+}
+.assortiment_inner {
+	display: flex;
+	flex-direction: row;
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-top: 30px;
+}
+.assortiment_block {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.assortiment_content {
+	border-radius: 10px;
+	background-color: #fff;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+	transition: box-shadow 0.3s ease-in-out;
+	position: relative;
+}
+.assortiment_content a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+.assortiment_content a:hover {
+	transition: box-shadow 0.3s ease-in-out;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+.assortiment_content span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: Vollkorn;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 25px;
+	color: #ED5408;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.press_centr {
+	margin-top: 80px;
+}
+.press_centr .news_inner {
+	margin-top: 30px;
 }
