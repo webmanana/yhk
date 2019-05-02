@@ -942,3 +942,7 @@ header {
 .quality_content_inner:first-child {
 	padding-bottom: 300px;
 }
+.quality_inner {
+	background-image: url(./img/hleb.png);
+	background-repeat: no-repeat;
+}
