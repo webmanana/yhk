@@ -10,8 +10,7 @@
 	<link rel="stylesheet" href="vendor/foundation/css/foundation.css">
 	<link rel="stylesheet" href="vendor/foundation/css/app.css">
 
-	<link rel="stylesheet" type="text/css" href="vendor/fullPage/jquery.fullpage.min.css" />
-	<link rel="stylesheet" href="preloader.css">
+	<link rel="stylesheet" href="vendor/cocoen-master/dist/css/cocoen.min.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -194,7 +193,18 @@
 				<div class="company_title">
 					<h1>Качество</h1>
 				</div>
+				<div class="quality_slide_container">
+					<div class="quality_slide_inner">
+						<div class="quality_slide">
+							<div class="cocoen">
+								<img src="img/1.png" alt="">
+								<img src="img/2.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="quality_inner">
+
 					<div class="quality_desc">
 						<p>Хлеб, который символизирует благополучие, всегда должен быть на столе на почётном месте.<br>
 Ржаной хлеб - источник силы и энергии.</p>
@@ -228,7 +238,11 @@
 		<script src="vendor/foundation/js/vendor/what-input.js"></script>
 		<script src="vendor/foundation/js/vendor/foundation.js"></script>
 		<script src="vendor/foundation/js/app.js"></script>
+		<script src="vendor/cocoen-master/dist/js/cocoen.min.js"></script>
 		<script src="main.js"></script>
+		<script type="text/javascript">
+			new Cocoen(document.querySelector('.cocoen'));
+		</script>
 	</div>
 </body>
 

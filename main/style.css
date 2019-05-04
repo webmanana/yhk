@@ -194,6 +194,10 @@ header {
 	color: #C4C4C4;
 	font-size: 13px;
 }
+.breadcrumb_inner {
+	color: #C4C4C4;
+	font-size: 13px;
+}
 .page_title h1 {
 	color: #F15C0B;
 	font-size: 24px;
@@ -685,11 +689,41 @@ header {
 	background-color: #fff;
 	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
 	border-radius: 10px;
-	padding-left: 40px;
-	padding-right: 40px;
-	padding-top: 25px;
-	padding-bottom: 25px;
-	min-height: 600px;
+	padding: 20px;
+	min-height: 632px;
+}
+.sklad {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 20px;
+    z-index: 111;
+    position: relative;
+}
+.sklad_title h3 {
+    font-size: 18px;
+    line-height: 17px;
+    color: #ED5408;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.sklad_content {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.sklad_block {
+	width: 50%;
+	padding-right: 150px;
+	margin-bottom: 20px;
+}
+.sklad_block h5 {
+	font-size: 14px;
+	margin-top: 0;
+	margin-bottom: 8px;
 }
 .contact_info_title {
 	color: #ED5408;
@@ -706,11 +740,11 @@ header {
 	flex-direction: row;
 }
 .contact_left {
-	padding-right: 20px;
+	padding-right: 10px;
 	width: 45%;
 }
 .contact_right {
-	padding-left: 20px;
+	padding-left: 10px;
 	width: 55%;
 }
 .contact_map {
@@ -726,7 +760,7 @@ header {
 	border-radius: 0 0 10px 10px;
 }
 .contact_map_title {
-	padding: 25px 40px;
+	padding: 20px;
 	display: flex;
 	flex-direction: column;
 }
@@ -942,7 +976,140 @@ header {
 .quality_content_inner:first-child {
 	padding-bottom: 300px;
 }
-.quality_inner {
-	background-image: url(./img/hleb.png);
-	background-repeat: no-repeat;
+.quality_slide_container {
+	position: relative;
+}
+.quality_slide_inner {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50px;
+}
+.quality_slide {
+	display: flex;
+	justify-content: center;
+}
+.cocoen {
+	width: 550px;
+}
+.cocoen-drag::before {
+	display: none;
+}
+.cocoen-drag {
+    background: transparent;
+    margin-left: -5px;
+    width: 10px;
+}
+/* products */
+.products_inner {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-left: -20px;
+	margin-right: -20px;
+	margin-top: 50px;
+}
+.products_block {
+	width: 25%;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+}
+.products_content {
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+	position: relative;
+}
+.products_content a {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	transition: box-shadow 0.3s ease-in-out;
+	height: 100%;
+	border-radius: 10px;
+}
+.products_content a:hover {
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+.products_img img {
+	border-radius: 10px;
+}
+.products_content span {
+	font-family: "Gotham", sans-serif;
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #F15C0B;
+	padding: 20px;
+	border-radius: 10px;
+	min-height: 80px;
+}
+/* rewards */
+.rewards_block {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+}
+.rewards_year {
+	padding: 25px 20px;
+	border-bottom: 1px solid #E3E3E3;
+}
+.rewards_year h3 {
+	margin: 0;
+	font-family: "Gotham", sans-serif;
+	font-size: 24px;
+	line-height: 23px;
+	color: #ED5408;
+}
+.rewards_title {
+	display: flex;
+	flex-direction: row;
+	padding: 13px 20px;
+	border-bottom: 1px solid #E3E3E3;
+}
+.rewards_title span {
+	font-family: "Gotham", sans-serif;
+	font-size: 18px;
+	color: #000000;
+	font-weight: bold;
+}
+.rewards_title_1 {
+	width: 70%;
+}
+.rewards_title_2 {
+	width: 30%;
+}
+.rewards_content {
+	padding: 13px 20px;
+}
+.rewards_inner {
+	margin-top: 20px;
+}
+.rewards_content ul {
+	display: flex;
+	flex-direction: column;
+}
+.rewards_content ul li {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+}
+.rewards_content ul li a {
+	width: 70%;
+	color: #0359FF;
+	text-decoration: underline;
+	padding-right: 30px;
+}
+.rewards_content ul li a:hover {
+	text-decoration: none;
+}
+.rewards_content ul li span {
+	width: 30%;
+	color: #333;
+	font-size: 14px;
 }
