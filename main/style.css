@@ -304,9 +304,11 @@ header {
 	font-family: 'Vollkorn', sans-serif;
 }
 .company_url {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .company_url a {
 	color: #222;
@@ -795,7 +797,7 @@ header {
     top: -187px;
     left: auto;
     right: 0;
-    z-index: 111;
+    z-index: 11;
 
 }
 .main_number_back img {
@@ -1107,11 +1109,40 @@ header {
 }
 .rewards_content ul li span {
 	width: 30%;
-	color: #333;
+	color: #000;
 	font-size: 14px;
 }
 .header_top_mobile, .burger {
 	display: none!important;
+}
+/* canvas */
+.header_canvas .off-canvas {
+	background-color: #fff;
+}
+.header_canvas .off-canvas ul {
+	display: flex;
+	flex-direction: column;
+}
+.header_canvas .off-canvas ul li {
+	border-bottom: 1px solid #EFEFEF;
+}
+.header_canvas .off-canvas ul li a {
+	font-size: 16px;
+	color: #837873;
+	padding: 16px 18px;
+	display: flex;
+}
+.header_canvas .off-canvas ul li a:hover, .header_canvas .off-canvas ul li a:focus, .header_canvas .off-canvas ul li a.active {
+	color: #F15C0B;
+}
+.header_canvas .off-canvas ul li a img {
+	padding-right: 10px;
+}
+.rewards_page {
+	padding-bottom: 50px;
+}
+.certificate_content ul li a {
+	width: 100%;
 }
 @media (max-width: 1160px) {
 	.container {
@@ -1141,6 +1172,22 @@ header {
 	.search_block input[type=text] {
 		width: 100px;
 	}
+	.main_top_wrap {
+		width: auto;
+	}
+	.main_top {
+		background-position: center;
+	}
+	.main_number_block span {
+		font-size: 60px;
+		line-height: normal;
+	}
+	.main_number_block {
+		padding-top: 10px;
+	}
+	.main_number_block p {
+		line-height: normal;
+	}
 }
 @media (max-width: 960px) {
 	.container {
@@ -1151,11 +1198,65 @@ header {
 		padding: 0;
 		margin-bottom: 15px;
 	}
+	.main_number_back {
+		height: 100px;
+	}
 	.header_top_left {
 		width: 35%;
 	}
+	.main_top_inner {
+	    height: 600px;
+	}
+	.main_top_wrap h1 {
+		font-size: 40px;
+		line-height: normal;
+	}
+	.quality_content_inner:first-child {
+	    padding-bottom: 40px;
+	}
+	.quality_slide_container {
+		display: none;
+	}
+	.main_top_wrap {
+	    width: 600px;
+	    top: 200px;
+	}
+	.main_top {
+	    height: 600px;
+	}
 	.header_log {
 		width: 30%;
+	}
+	.assortiment_block {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.main_number_block span {
+	    font-size: 32px;
+	    line-height: normal;
+	}
+	.main_number_block p {
+		font-size: 12px;
+	}
+	.assortiment {
+		margin-top: 30px;
+	}
+	.assortiment_content span {
+		font-size: 14px;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		min-height: 70px;
+	}
+	.assortiment_inner {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.main_number_block {
+	    padding-top: 8px;
+	    padding-bottom: 10px;
+	    padding-left: 10px;
+	    padding-right: 10px;
 	}
 	.sklad {
 		margin-top: 0;
@@ -1223,16 +1324,29 @@ header {
 		padding-left: 15px;
     	padding-right: 15px;
 	}
-	.header_log, .header_top_right, .header_top_left {
+	.header_log, .header_top_right, .header_top_left, .rewards_title {
 		display: none;
 	}
 	.products_block {
 		width: 50%;
 		margin-bottom: 15px;
 	}
+	.rewards_content ul li {
+		flex-direction: column;
+	}
 	.products_content span {
 	    padding: 15px;
 	    font-size: 12px;
+	}
+	.rewards_content ul li a, .rewards_content ul li span {
+		width: 100%;
+		padding: 0;
+	}
+	.rewards_content {
+		padding: 15px;
+	}
+	.rewards_year {
+		padding: 15px;
 	}
 	.logo {
 		width: 73%;
@@ -1340,5 +1454,38 @@ header {
 	.news_block_first h4 {
 		font-size: 15px;
 		line-height: normal;
+	}
+	.main_number_back img {
+		display: none;
+	}
+	.main_top {
+	    height: 450px;
+	}
+	.main_top_wrap {
+	    width: 100%;
+	    top: 110px;
+	    left: 0;
+	}
+	.main_top_wrap h1 {
+		font-size: 32px;
+	}
+	.main_top_inner {
+	    height: 560px;
+	}
+	.main_number_content, .assortiment_inner {
+	    flex-wrap: wrap;
+	}
+	.quality_block {
+		width: 100%;
+	}
+	.quality_content_inner {
+		flex-direction: column;
+	}
+	.assortiment_block {
+		width: 50%;
+		margin-bottom: 15px;
+	}
+	.main_number_block {
+		width: 50%;
 	}
 }

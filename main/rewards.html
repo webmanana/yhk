@@ -17,6 +17,9 @@
 		<header>
 			<div class="container">
 				<div class="header_wrap">
+					<div class="burger">
+						<a href="#" data-toggle="offCanvas"><img src="img/burger.png" alt=""> </a>
+					</div>
 					<div class="header_search">
 						<form class="search_block" action="">
 							<input class="search_submit" name="s" type="submit">
@@ -24,41 +27,49 @@
 						</form>
 					</div>
 					<div class="header_top_left">
-						<ul>
+						<ul class="header_top_desk">
 							<li><a href="#">Продукция</a></li>
 							<li><a href="#">Покупателям</a></li>
 							<li><a href="#">Поставщикам</a></li>
+						</ul>
+						<ul class="header_top_mobile">
+							<li><a href="#">Продукция</a></li>
+							<li><a href="#">Покупателям</a></li>
 						</ul>
 					</div>
 					<div class="logo">
 						<a href="#"><img src="img/logo.png" alt="ЯХК"></a>
 					</div>
 					<div class="header_top_right">
-						<ul>
+						<ul class="header_top_desk">
 							<li><a href="#">Компания</a></li>
 							<li><a href="#">Карьера</a></li>
 							<li><a href="#">Контакты</a></li>
 						</ul>
+						<ul class="header_top_mobile">
+							<li><a href="#">Поставщикам</a></li>
+							<li><a href="#" class="header_top_mobile_mini">Контакты</a></li>
+						</ul>
 					</div>
 					<div class="header_log">
 						<div class="header_log_block">
-							<a class="login" href="#"><img src="img/login.svg" alt=""></a>
-							<span>Вход для клиентов</span>
+							<a class="login" href="#">
+								<img src="img/login.svg" alt=""><span>Вход для клиентов</span>
+							</a>
 						</div>
-					</div>
-					<div class="burger">
-						<a href="#" data-toggle="offCanvas"><img src="img/burger.png" alt=""> </a>
 					</div>
 				</div>
 			</div>
 			<div class="header_canvas">
 				<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 					<ul class="vertical menu">
-						<li><a href="#">Главная</a></li>
-						<li><a href="#">Информация</a></li>
-						<li><a href="#">Мои данные</a></li>
-						<li><a href="#">История заказов</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li><a href="#">Продукция</a></li>
+						<li><a href="#">Покупателям</a></li>
+						<li><a href="#">Компания</a></li>
+						<li><a href="#">Карьера</a></li>
+						<li><a href="#" class="active">Контакты</a></li>
+						<li><a href="#"><img src="img/login.svg" alt=""> Вход для клиентов</a></li>
+						<li><a href="#"><img src="img/search.svg" alt=""> Поиск</a></li>
 					</ul>
 				</div>
 			</div>
