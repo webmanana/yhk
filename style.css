@@ -7,6 +7,15 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Gotham';
+	src: url('vendor/fonts/GothamPro-Bold.eot');
+	src: url('vendor/fonts/GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
+	url('vendor/fonts/GothamPro-Bold.woff') format('woff'),
+	url('vendor/fonts/GothamPro-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 body {
 	color: #000;
 	font-family: 'Arial', sans-serif;
@@ -32,6 +41,7 @@ ul, ol {
 	background-color: #E5E5E5;
 	padding-top: 40px;
 	position: relative;
+	min-height: 90vh;
 }
 .grid-container {
 	padding-right: 40px;
@@ -46,6 +56,9 @@ ul, ol {
 .grid-padding-x > .cell {
     padding-right: 20px;
     padding-left: 20px;
+}
+.header_menu ul li a:hover {
+    color: #F15C0B;
 }
 /* header */
 .logo {
@@ -85,6 +98,9 @@ ul, ol {
 .header_log_block a {
 	padding-right: 10px;
 }
+.header_log_block a:hover span {
+    color: #F15C0B;
+}
 .header_log_block span {
 	font-family: 'Gotham', sans-serif;
 	font-size: 13px;
@@ -100,6 +116,227 @@ ul, ol {
 }
 .burger {
 	display: none;
+}
+/* login dropdown */
+.header_dropdown_content {
+	background-color: #fff;
+	text-align: left;
+	box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.1);
+	font-family: 'Gotham', sans-serif;
+}
+.dropdown-pane {
+	padding: 0;
+	border: none;
+}
+.header_dropdown_title {
+	font-size: 14px;
+	color: #000000;
+	margin-bottom: 15px;
+}
+.header_dropdown_content input[type=text] {
+	background-color: #F9F9F9;
+	border: 1px solid #EEEEEE;
+	padding: 15px;
+	margin-bottom: 10px;
+}
+.header_dropdown_top {
+	padding: 30px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+.header_dropdown_bottom {
+	padding: 30px;
+	background-color: #FCF8EE;
+	display: flex;
+	flex-direction: column;
+}
+.header_dropdown_content input[type=text]::placeholder {
+	color: #AAAAAA;
+	font-size: 12px;
+}
+.header_dropdown_why {
+	font-size: 12px;
+	line-height: 11px;
+	color: #AAAAAA;
+	margin-bottom: 18px;
+	margin-top: 10px;
+}
+.header_dropdown_why:hover {
+	text-decoration: underline;
+}
+.header_dropdown_submit {
+	padding: 20px 50px;
+	background-color: #ED5408;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0px 5px 15px rgba(0, 128, 106, 0.2);
+	font-size: 12px;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+}
+.header_dropdown_submit:hover {
+	background-color: #d64a04;
+}
+.header_dropdown_reg {
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #ED5408;
+	border: 1px solid #ED5408;
+	display: flex;
+	padding: 18px 40px;
+	font-weight: bold;
+}
+.header_dropdown_reg:hover {
+	background-color: #ED5408;
+	color: #fff;
+}
+/* yur page login */
+.yur_page {
+	padding-top: 40px;
+	max-width: 900px;
+	margin: 0 auto;
+	font-family: 'Gotham', sans-serif;
+}
+.yur_login_inner {
+	background-color: #fff;
+	padding: 20px;
+}
+.yur_login_content {
+	padding-bottom: 60px;
+}
+.yur_login_content h1 {
+	font-size: 18px;
+	line-height: 17px;
+	color: #000000;
+	margin-top: 8px;
+}
+.yur_login {
+	display: flex;
+	flex-direction: column;
+	max-width: 200px;
+}
+.yur_login_title {
+	font-size: 16px;
+	color: #000000;
+	margin-top: 24px;
+	margin-bottom: 12px;
+}
+.yur_login input[type=text], .yur_login input[type=password] {
+	background-color: #FFFFFF;
+	border: 1px solid #EAEAEA;
+	box-sizing: border-box;
+	border-radius: 5px;
+	padding: 8px 10px;
+}
+.yur_login_why {
+	font-size: 14px;
+	color: #ED5408;
+	margin-top: 24px;
+	margin-bottom: 24px;
+}
+.yur_login_why:hover {
+	text-decoration: underline;
+}
+.checkbox_block {
+	position: relative;
+}
+.checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 3px;
+}
+.checkbox_block:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.checkbox_block input:checked ~ .checkmark {
+  background-color: #F15537;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.checkbox_block input:checked ~ .checkmark:after {
+	display: block;
+}
+.checkbox_block .checkmark:after {
+    left: 5px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkbox_block input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+.checkbox_text {
+    padding-left: 24px;
+	font-size: 12px;
+	line-height: 12px;
+	color: #222222;
+}
+.yur_checkbox_inner {
+	margin-bottom: 24px;
+	cursor: pointer;
+}
+.yur_login input[type=submit] {
+	background: #ED5408;
+	border-radius: 5px;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #FFFFFF;
+	border: none;
+	padding: 12px 30px;
+	margin-bottom: 16px;
+	cursor: pointer;
+}
+.yur_login input[type=submit]:hover {
+	background-color: #d24804;
+}
+/* yur_reg */
+.yur_reg {
+	display: flex;
+	flex-direction: column;
+	max-width: 100%;
+}
+.yur_login_top, .yur_login_bottom {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 16px;
+}
+.yur_login_top_block {
+	display: flex;
+	flex-direction: column;
+	max-width: 200px;
+	margin-right: 24px;
+}
+.yur_login_top_block input[type=submit] {
+    background: #ED5408;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 10px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    margin-top: 36px;
 }
 /* product */
 .product_mob_block {
@@ -515,6 +752,9 @@ input[type=number] {
 	    justify-content: center;
 	    width: 80px;
 	}
+	.yur_login_top, .yur_login_bottom {
+	    flex-direction: column;
+	}
 	.burger a{
 		width: 100%;
 		height: 100%;
@@ -548,11 +788,35 @@ input[type=number] {
 		padding-right: 15px;
 		overflow: hidden;
 	}
+	.yur_login_top_block {
+		margin: 0;
+		max-width: 100%;
+	}
 	.product_mob_block {
 		display: flex;
 	}
+	.yur_login_content h1 {
+		font-size: 16px;
+	}
+	.yur_login_title {
+		font-size: 14px;
+		margin-top: 16px;
+		margin-bottom: 6px;
+	}
+	.wrap_opt {
+		min-height: 100%;
+	}
+	.yur_page {
+		padding-top: 20px;
+	}
+	.yur_login {
+		max-width: 100%;
+	}
 	.wrap_opt {
 		padding-top: 15px;
+	}
+	.yur_login_inner {
+		padding: 15px;
 	}
 	.tabs-info, .product_desc, .accordion_destkop, .cart_total_inner {
 		display: none!important;
