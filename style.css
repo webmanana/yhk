@@ -733,6 +733,9 @@ input[type=number] {
 	color: #ED5408;
 	font-weight: bold;
 }
+.mobile_login {
+	display: none;
+}
 /* media */
 @media (max-width: 1024px) {
 	.header_menu, .header_log, #panel2a, .cart_inner {
@@ -781,12 +784,36 @@ input[type=number] {
 	.cart_accordion {
 	    height: 78vh;
 	}
+	.mobile_login {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 80px;
+		width: 80px;
+		top: 0;
+		position: absolute;
+		right: 80px;
+		border-left: 1px solid #eee;
+	}
+	.mobile_login a {
+	    width: 100%;
+	    height: 100%;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	}
 }
 @media (max-width: 575px) {
 	.grid-container {
 		padding-left: 15px;
 		padding-right: 15px;
 		overflow: hidden;
+	}
+	.mobile_login {
+	    height: 50px;
+	    width: 50px;
+	    border: none;
+	    right: 50px;
 	}
 	.yur_login_top_block {
 		margin: 0;
