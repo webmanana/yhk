@@ -108,7 +108,9 @@
 													</div>
 													<div class="product_mob_price">
 														<span>Цена 42,64 руб</span>
-														<a href="#">В корзину</a>
+														<a href="#" data-loading-start>В корзину</a>
+														<a href="#" class="hide" data-loading-end><img src="img/ajax-loader.gif" alt=""></a>
+														<a href="#" class="hide complete" data-success-message>Добавлено</a>
 													</div>
 												</div>
 												<div class="product_mob_block">
@@ -136,14 +138,22 @@
 												<table class="product_table_name ">
 													<tbody>
 														<tr id="panel1" class="accordion-item is-active" data-accordion-item data-toggler data-animate="slide-in-right slide-out-right">
-															<td>Хлеб “Дарницкий” 0,65 кг.</td>
+															<td>
+																<div class="product_item" style="position:relative">
+																	<img src="img/product.png" class="small-image" alt="">
+																	<span class="large">
+																        <img src="img/product.png" class="large-image" alt="adventure" >
+																    </span>
+																	 Хлеб “Дарницкий” 0,65 кг.
+																</div>
+															 </td>
 															<td>36 часов</td>
 															<td>42,61 руб</td>
 															<td>14 шт.</td>
 															<td><a data-toggle="panel1 panel4" href="#">В Корзину</a></td>
 														</tr>
 														<tr id="panel2" class="accordion-item is-active" data-accordion-item data-toggler data-animate="slide-in-right slide-out-right">
-															<td>Хлеб “Дарницкий” 0,65 кг. (в упаковке с нарезкой)</td>
+															<td><img src="img/product.png" alt=""> Хлеб “Дарницкий” 0,65 кг. (в упаковке с нарезкой)</td>
 															<td>4 суток</td>
 															<td>46,09 руб</td>
 															<td>14 шт.</td>

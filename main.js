@@ -1,6 +1,14 @@
 if (Foundation.MediaQuery.atLeast('large')) {
-    
+
 }
+$('[data-loading-start]').click(function() {
+  $(this).addClass('hide');
+  $(this).parent().find('[data-loading-end]').removeClass('hide');
+  setTimeout(function() {
+    $('[data-loading-end]').addClass('hide');
+    $('[data-success-message]').removeClass('hide')
+}, 800)
+});
 jQuery(document).ready(function(){
     // This button will increment the value
     $('[data-quantity="plus"]').click(function(e){
