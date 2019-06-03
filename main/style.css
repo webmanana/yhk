@@ -1324,6 +1324,9 @@ header {
 	line-height: 24px;
 	color: #ED5408;
 }
+.footer_logo_text a:hover {
+	text-decoration: underline;
+}
 .footer_content span {
 	font-family: 'Vollkorn', sans-serif;
 	font-style: normal;
@@ -1383,6 +1386,9 @@ header {
 .widget .data a.image:link, .widget .data a.image:visited {
     border: 0;
     box-shadow: 0;
+}
+.products_page, .contact_page, .news_page {
+	padding-bottom: 100px;
 }
 /* parallax */
 .parallax {

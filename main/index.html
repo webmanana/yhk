@@ -297,7 +297,7 @@
 						<div class="footer_block">
 							<div class="footer_content">
 								<a href="https://www.instagram.com/yhk14.ru/" class="footer_insta"><img src="img/insta.png" alt=""> Мы в Instagram</a>
-								<iframe src='vendor/inwidget/index.php?inline=3&view=6&toolbar=false' data-inwidget scrolling='no' frameborder='no' style='border:none;width:100%;height:320px;overflow:hidden;'></iframe>
+								<iframe src='vendor/inwidget/index.php?inline=3&view=6&toolbar=false' data-inwidget scrolling='no' frameborder='no' style='border:none;width:300px;height:250px;overflow:hidden;margin-top: 20px;'></iframe>
 							</div>
 						</div>
 					</div>
@@ -307,7 +307,7 @@
 				<div class="container">
 					<div class="footer_bottom_content">
 						<span>2019 © АО  “Якутский хлебокомбинат”</span>
-						<span>Разработка сайта - <a href="http://platforma.bz">Платформа</a></span>
+						<span>Разработка сайта - <a href="http://platforma.bz" target="_blank">Платформа</a></span>
 					</div>
 				</div>
 			</div>
@@ -325,17 +325,21 @@
 			var targetPos = target.offset().top;
 			var winHeight = $(window).height();
 			var scrollToElem = targetPos - winHeight;
+			var flag = true;
 			$(window).scroll(function(){
 				var winScrollTop = $(this).scrollTop();
 				if(winScrollTop > scrollToElem){
-					$('.cocoen div').stop(true);
-					$('.cocoen-drag').stop(true);
-					$( ".cocoen div" ).animate({ "width": "30%" }, "slow" );
-					$( ".cocoen-drag" ).animate({ "left": "30%" }, "slow" );
-					$( ".cocoen div" ).animate({ "width": "70%" }, "slow" );
-					$( ".cocoen-drag" ).animate({ "left": "70%" }, "slow" );
-					$( ".cocoen div" ).animate({ "width": "50%" }, "slow" );
-					$( ".cocoen-drag" ).animate({ "left": "50%" }, "slow" );
+					if (flag) {
+						$('.cocoen div').stop(true);
+						$('.cocoen-drag').stop(true);
+						$( ".cocoen div" ).animate({ "width": "30%" }, "slow" );
+						$( ".cocoen-drag" ).animate({ "left": "30%" }, "slow" );
+						$( ".cocoen div" ).animate({ "width": "70%" }, "slow" );
+						$( ".cocoen-drag" ).animate({ "left": "70%" }, "slow" );
+						$( ".cocoen div" ).animate({ "width": "50%" }, "slow" );
+						$( ".cocoen-drag" ).animate({ "left": "50%" }, "slow" );
+						flag = false;
+					}
 				}
 			});
 		</script>
