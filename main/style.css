@@ -1177,6 +1177,10 @@ header {
 	padding: 10px 50px;
 	cursor: pointer;
 }
+.tort_radio label:hover {
+	border-color: #ED5408;
+	color: #ED5408;
+}
 .tort_radio {
 	display: flex;
 	margin-right: 12px;
@@ -1410,6 +1414,51 @@ header {
 	text-align: center;
 	color: #FFFFFF;
 }
+.tort_date_block {
+	display: flex;
+	flex-direction: column;
+	margin-right: 20px;
+}
+.tort_date_block input {
+	border: 1px solid #E4E4E4;
+	padding: 8px 7px;
+	border-radius: 5px;
+}
+.tort_date_block select {
+    max-width: 80px;
+    border-radius: 5px;
+    border: 1px solid #E4E4E4;
+    padding: 8px 7px;
+}
+.tort_date_inner {
+	display: flex;
+	flex-direction: row;
+	padding-right: 24px;
+}
+.tort_input input {
+	background: #ED5408;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #FFFFFF;
+	border: none;
+	padding: 10px 50px;
+	cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.tort_input input:hover {
+	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+}
+.tort_content {
+	padding-bottom: 60px;
+}
+.tort_input {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 @media (max-width: 1160px) {
 	.container {
 		max-width: 924px;
@@ -1454,10 +1503,34 @@ header {
 	.main_number_block p {
 		line-height: normal;
 	}
+	.footer_block:last-child {
+		display: none;
+	}
+	.footer_block {
+		width: 25%;
+	}
+	.footer_block:first-child {
+		width: 50%;
+	}
 }
 @media (max-width: 960px) {
 	.container {
 		max-width: 600px;
+	}
+	.tort_radio {
+	    width: 50%;
+	    margin: 0;
+	    padding-left: 10px;
+	    padding-right: 10px;
+	    padding-bottom: 10px;
+	}
+	.tort_radio label {
+		width: 100%;
+		text-align: center;
+	}
+	.tort_radio_inner {
+		margin-left: -10px;
+		margin-right: -10px;
 	}
 	.contact_left, .contact_right {
 		width: 100%;
@@ -1578,6 +1651,15 @@ header {
 		margin-right: -10px;
 	}
 }
+@media (max-width: 680px) {
+	.footer_block:first-child {
+		display: block;
+		width: 100%;
+	}
+	.footer_block {
+		display: none;
+	}
+}
 @media (max-width: 600px) {
 	.container {
 	    max-width: 480px;
@@ -1589,6 +1671,18 @@ header {
 		max-width: 480px;
 		padding-left: 15px;
     	padding-right: 15px;
+	}
+	.tort_radio label {
+		padding: 10px;
+	}
+	.footer_bottom span {
+		padding-bottom: 5px;
+	}
+	.footer_bottom_content {
+		flex-direction: column;
+	}
+	#map {
+		width: 100%!important;
 	}
 	.header_log, .header_top_right, .header_top_left, .rewards_title {
 		display: none;
@@ -1753,5 +1847,47 @@ header {
 	}
 	.main_number_block {
 		width: 50%;
+	}
+	.parallax_text span {
+		font-size: 14px;
+		line-height: normal;
+	}
+}
+@media (max-width: 500px) {
+	.tort_info_1 {
+		flex-direction: column;
+	}
+	.footer_block {
+		padding: 0;
+	}
+	.tort_date_block {
+		margin-right: 10px;
+	}
+	.tort_input input {
+		font-size: 12px;
+	}
+	.page_inner {
+		padding: 15px 10px;
+	}
+	.tort_radio_inner {
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	.tort_info_block {
+		padding-bottom: 10px;
+	}
+	.tort_radio {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	.tort_radio label {
+		font-size: 12px;
+		padding: 8px;
+	}
+	.footer_inner {
+		margin: 0;
+	}
+	.tort_block span {
+		font-size: 14px;
 	}
 }

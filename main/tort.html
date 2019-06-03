@@ -8,6 +8,7 @@
 	<title>ЯХК | Заказать торт</title>
 	<link rel="stylesheet" href="vendor/foundation/css/foundation.css">
 	<link rel="stylesheet" href="vendor/foundation/css/app.css">
+	<link rel="stylesheet" href="vendor/air-datepicker/dist/css/datepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
 	<link rel="stylesheet" href="style.css">
 </head>
@@ -184,6 +185,7 @@
 								    <option>Пункт 2</option>
 								</select>
 								<span class="tort_info_2_info">В магазины доставляются торты только до 3 кг.<br>Свыше 3 кг. - только с завода.<br>1500 руб. - аренда подставки</span>
+								<div id="map" style="width:500px; height:400px"></div>
 							</div>
 						</div>
 						<div class="tort_block">
@@ -191,6 +193,7 @@
 							<div class="tort_date_inner">
 								<div class="tort_date_block">
 									<span>Дата</span>
+									<input type='text' class="datepicker-here" data-position="right top" />
 								</div>
 								<div class="tort_date_block">
 									<span>Время</span>
@@ -201,6 +204,9 @@
 									</select>
 								</div>
 							</div>
+						</div>
+						<div class="tort_input">
+							<input type="submit" name="" value="Оформить заказ">
 						</div>
 					</form>
 				</div>
@@ -274,10 +280,22 @@
 		<script src="vendor/foundation/js/vendor/what-input.js"></script>
 		<script src="vendor/foundation/js/vendor/foundation.js"></script>
 		<script src="vendor/foundation/js/app.js"></script>
-		<script src="vendor/slick/js/app.js"></script>
-		<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+		<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+		<script src="vendor/air-datepicker/dist/js/datepicker.min.js"></script>
 		<script type="text/javascript">
-		var inputs = document.querySelectorAll( '.inputfile' );
+			var map;
+
+			DG.then(function () {
+				map = DG.map('map', {
+					center: [61.982418, 129.662109],
+					zoom: 17
+				});
+
+				DG.marker([61.982418, 129.662109]).addTo(map);
+			});
+		</script>
+		<script type="text/javascript">
+			var inputs = document.querySelectorAll( '.inputfile' );
 			Array.prototype.forEach.call( inputs, function( input )
 			{
 			var label	 = input.nextElementSibling,
