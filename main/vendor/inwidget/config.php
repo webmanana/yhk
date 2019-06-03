@@ -69,7 +69,7 @@ $CONFIG = array(
 	'imgRandom' => true,
 
 	// How many pictures the widget will get from Instagram?
-	'imgCount' => 30,
+	'imgCount' => 6,
 
 	// -------------------------------------------------------------
 	// Cache

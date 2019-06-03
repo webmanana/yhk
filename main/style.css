@@ -923,6 +923,7 @@ header {
 }
 .press_centr {
 	margin-top: 80px;
+	padding-bottom: 60px;
 }
 .press_centr .news_inner {
 	margin-top: 30px;
@@ -1373,6 +1374,35 @@ header {
 .footer_bottom_content {
 	display: flex;
 	justify-content: space-between;
+}
+.widget {
+    width: 100%!important;
+    background-color: #fff!important;
+    border: none!important;
+}
+.widget .data a.image:link, .widget .data a.image:visited {
+    border: 0;
+    box-shadow: 0;
+}
+/* parallax */
+.parallax {
+    background-image: url(./img/parallax.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 440px;
+	background-attachment: fixed;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-position: center;
+}
+.parallax_text span {
+	font-family: 'Vollkorn', sans-serif;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	color: #FFFFFF;
 }
 @media (max-width: 1160px) {
 	.container {
