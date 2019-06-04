@@ -1465,12 +1465,13 @@ header {
 /* login */
 .login_wrap {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background: #FFFFFF;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
     max-width: 720px;
     margin: 0 auto;
     margin-top: 40px;
+	border-radius: 10px;
 }
 .button {
 	font-size: 16px;
@@ -1487,16 +1488,16 @@ header {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
 }
 .login_inner {
-	width: 50%;
 	border-right: 1px solid #eee;
 	padding: 30px;
+
 }
 .reg_inner {
-	width: 50%;
 	padding: 30px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	height: 100%;
 }
 .reg_inner span {
 	margin-bottom: 18px;
@@ -1506,13 +1507,12 @@ header {
 	padding-left: 15px;
 }
 .reg_inner ul li {
-	margin-bottom: 18px;
+	margin-bottom: 16px;
 	color: #000;
 }
 .login_inner h3, .reg_inner h3 {
 	margin-top: 0;
 	font-size: 18px;
-	line-height: 17px;
 	color: #000000;
 	margin-bottom: 30px;
 }
@@ -1541,6 +1541,37 @@ header {
 	border: 1px solid #EAEAEA;
 	border-radius: 3px;
 	padding: 15px;
+}
+.login_wrap .tabs-title > a {
+	background-color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 10px;
+	cursor: pointer;
+	outline: none;
+	border: none;
+}
+.login_wrap .tabs {
+    border: none;
+    padding: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+	display: none;
+}
+.login_wrap .tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+	color: #ED5408;
+	outline: none;
+	border: none;
+}
+.login_wrap .tabs-content {
+    border: none;
+    display: flex;
+    flex-direction: row;
+}
+.login_wrap .tabs-panel {
+	padding: 0;
+	width: 50%;
 }
 @media (max-width: 1160px) {
 	.container {
@@ -1615,10 +1646,27 @@ header {
 		margin-left: -10px;
 		margin-right: -10px;
 	}
+	.login_inner, .reg_inner {
+		padding: 20px;
+	}
+	.login_inner h3, .reg_inner h3 {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+	.reg_inner span {
+		margin-bottom: 10px;
+		font-size: 13px;
+	}
+	.login_block span, .login_inner a {
+		font-size: 13px;
+	}
 	.contact_left, .contact_right {
 		width: 100%;
 		padding: 0;
 		margin-bottom: 15px;
+	}
+	.reg_inner ul li, .button {
+		font-size: 13px;
 	}
 	.main_number_back {
 		height: 100px;
@@ -1738,6 +1786,11 @@ header {
 	.footer_block:first-child {
 		display: block;
 		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	.footer_inner {
+		margin: 0;
 	}
 	.footer_block {
 		display: none;
@@ -1748,6 +1801,19 @@ header {
 	    max-width: 480px;
 	    padding-left: 15px;
 	    padding-right: 15px;
+	}
+	.login_wrap .tabs-title {
+	    width: 50%;
+	    text-align: center;
+	}
+	.login_wrap .tabs {
+		display: block;
+	}
+	.login_wrap .tabs-panel {
+		width: 100%;
+	}
+	.login_inner {
+		border: none;
 	}
 	.page_container {
 		width: 100%;
@@ -1935,10 +2001,24 @@ header {
 		font-size: 14px;
 		line-height: normal;
 	}
+	.login_wrap .tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+	    border-bottom: 2px solid #ED5408;
+	    border-radius: 10px 0 0 0;
+	}
 }
 @media (max-width: 500px) {
 	.tort_info_1 {
 		flex-direction: column;
+	}
+	.login_inner, .reg_inner {
+		padding: 15px;
+	}
+	.login_inner h3, .reg_inner h3 {
+		font-size: 13px;
+	}
+	.login_wrap .tabs-title > a {
+		font-size: 13px;
+		padding: 20px 10px;
 	}
 	.footer_block {
 		padding: 0;
@@ -1972,5 +2052,10 @@ header {
 	}
 	.tort_block span {
 		font-size: 14px;
+	}
+}
+@media (max-width: 380px) {
+	.login_wrap .tabs-title > a {
+		font-size: 12px;
 	}
 }

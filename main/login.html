@@ -87,31 +87,41 @@
 					<h1>Авторизация</h1>
 				</div>
 				<div class="login_wrap">
-					<div class="login_inner">
-						<form class="login_form" action="index.html" method="post">
-							<h3>Введите логин и пароль</h3>
-							<div class="login_block">
-								<span>Логин</span>
-								<input type="text" name="" value="">
+					<ul class="tabs" data-tabs id="login_tabs">
+						<li class="tabs-title is-active"><a href="#login1" aria-selected="true">Авторизоваться</a></li>
+						<li class="tabs-title"><a href="#">Зарегистрироваться</a></li><!-- ссылка на страницу -->
+					</ul>
+					<div class="tabs-content" data-tabs-content="login_tabs">
+						<div class="tabs-panel is-active" id="login1">
+							<div class="login_inner">
+								<form class="login_form" action="index.html" method="post">
+									<h3>Введите логин и пароль</h3>
+									<div class="login_block">
+										<span>Логин</span>
+										<input type="text" name="" value="">
+									</div>
+									<div class="login_block">
+										<span>Пароль</span>
+										<input type="text" name="" value="">
+									</div>
+									<a href="#">Забыли пароль</a>
+									<input type="submit" class="button" name="" value="Войти в профиль">
+								</form>
 							</div>
-							<div class="login_block">
-								<span>Пароль</span>
-								<input type="text" name="" value="">
+						</div>
+						<div class="tabs-panel" id="login2">
+							<div class="reg_inner">
+								<h3>Зарегистрироваться</h3>
+								<span>Быстро, удобно, легко!</span>
+								<ul>
+									<li>Используйте введённые ранее данные</li>
+									<li>Отслеживайте статус заказа</li>
+									<li>Получайте персонализированные предложения на электронную почту</li>
+									<li>Сохраняйте историю заказов</li>
+								</ul>
+								<a href="#" class="button">Зарегистрироваться</a>
 							</div>
-							<a href="#">Забыли пароль</a>
-							<input type="submit" class="button" name="" value="Войти в профиль">
-						</form>
-					</div>
-					<div class="reg_inner">
-						<h3>Введите логин и пароль</h3>
-						<span>Быстро, удобно, легко!</span>
-						<ul>
-							<li>Используйте введённые ранее данные</li>
-							<li>Отслеживайте статус заказа</li>
-							<li>Получайте персонализированные предложения на электронную почту</li>
-							<li>Сохраняйте историю заказов</li>
-						</ul>
-						<a href="#" class="button">Зарегистрироваться</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -186,6 +196,26 @@
 		<script src="vendor/foundation/js/app.js"></script>
 		<script src="vendor/slick/js/app.js"></script>
 		<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+			    $(window).on("resize", function (e) {
+			        checkScreenSize();
+			    });
+
+			    checkScreenSize();
+
+			    function checkScreenSize(){
+			        var newWindowWidth = $(window).width();
+			        if (newWindowWidth < 601) {
+			            $('#login2').removeClass('is-active');
+			        }
+			        else
+			        {
+						$('#login2').addClass('is-active');
+			        }
+			    }
+			});
+		</script>
 	</div>
 </body>
 
