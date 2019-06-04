@@ -79,26 +79,42 @@
 	</header>
 	<div class="wrap_opt">
 		<section class="yur_page">
-			<div class="yur_login_inner">
-				<div class="yur_login_content">
-					<h1>Введите логин и пароль</h1>
-					<form class="yur_login" action="index.html" method="post">
-						<span class="yur_login_title">Логин</span>
-						<input type="text" name="login1" value="">
-						<span class="yur_login_title">Пароль</span>
-						<input type="password" name="pass1" value="">
-						<a href="#" class="yur_login_why">Забыли пароль?</a>
-						<input type="submit" class="yur_login_submit" name="log" value="Войти в профиль">
-						<label for="check" class="yur_checkbox_inner">
-							<div class="checkbox_block">
-								<input id="check" type="checkbox" name="" value="" required>
-								<span class="checkmark"></span>
-							</div>
-							<div class="checkbox_text">
-								Запомнить меня
-							</div>
-						</label>
-					</form>
+			<div class="login_wrap">
+				<ul class="tabs" data-tabs id="login_tabs">
+					<li class="tabs-title is-active"><a href="#login1" aria-selected="true">Авторизоваться</a></li>
+					<li class="tabs-title"><a href="#">Зарегистрироваться</a></li><!-- ссылка на страницу -->
+				</ul>
+				<div class="tabs-content" data-tabs-content="login_tabs">
+					<div class="tabs-panel is-active" id="login1">
+						<div class="login_inner">
+							<form class="login_form" action="index.html" method="post">
+								<h3>Введите логин и пароль</h3>
+								<div class="login_block">
+									<span>Логин</span>
+									<input type="text" name="" value="">
+								</div>
+								<div class="login_block">
+									<span>Пароль</span>
+									<input type="text" name="" value="">
+								</div>
+								<a href="#">Забыли пароль</a>
+								<input type="submit" class="button" name="" value="Войти в профиль">
+							</form>
+						</div>
+					</div>
+					<div class="tabs-panel" id="login2">
+						<div class="reg_inner">
+							<h3>Зарегистрироваться</h3>
+							<span>Быстро, удобно, легко!</span>
+							<ul>
+								<li>Используйте введённые ранее данные</li>
+								<li>Отслеживайте статус заказа</li>
+								<li>Получайте персонализированные предложения на электронную почту</li>
+								<li>Сохраняйте историю заказов</li>
+							</ul>
+							<a href="#" class="button">Зарегистрироваться</a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -109,6 +125,26 @@
 	<script src="vendor/foundation/js/vendor/foundation.js"></script>
 	<script src="vendor/foundation/js/app.js"></script>
 	<script src="main.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$(window).on("resize", function (e) {
+				checkScreenSize();
+			});
+
+			checkScreenSize();
+
+			function checkScreenSize(){
+				var newWindowWidth = $(window).width();
+				if (newWindowWidth < 601) {
+					$('#login2').removeClass('is-active');
+				}
+				else
+				{
+					$('#login2').addClass('is-active');
+				}
+			}
+		});
+	</script>
 </body>
 
 </html>
