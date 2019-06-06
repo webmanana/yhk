@@ -45,6 +45,13 @@
     padding-right: 12px;
     padding-left: 12px;
 }
+.yur_login_inn input[type=text] {
+    width: 100%;
+}
+.yur_login_inn .yur_login_top_block {
+    width: 100%;
+    margin: 0;
+}
 .yur_login_top, .yur_login_bottom {
     display: flex;
     flex-direction: row;
