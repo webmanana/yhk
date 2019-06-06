@@ -201,10 +201,11 @@ ul, ol {
 }
 .yur_login_inner {
 	background-color: #fff;
-	padding: 20px;
-}
-.yur_login_content {
-	padding-bottom: 60px;
+	padding: 30px;
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	margin: 0 auto;
+	max-width: 720px;
 }
 .yur_login_content h1 {
 	font-size: 18px;
@@ -218,7 +219,7 @@ ul, ol {
 	max-width: 200px;
 }
 .yur_login_title {
-	font-size: 16px;
+	font-size: 14px;
 	color: #000000;
 	margin-top: 24px;
 	margin-bottom: 12px;
@@ -227,8 +228,9 @@ ul, ol {
 	background-color: #FFFFFF;
 	border: 1px solid #EAEAEA;
 	box-sizing: border-box;
-	border-radius: 5px;
-	padding: 8px 10px;
+	border-radius: 3px;
+	padding: 13px 20px;
+	font-size: 14px;
 }
 .yur_login_why {
 	font-size: 14px;
@@ -314,16 +316,30 @@ ul, ol {
 	flex-direction: column;
 	max-width: 100%;
 }
-.yur_login_top, .yur_login_bottom {
+.yur_login_inn {
+	margin-left: -12px;
+	margin-right: -12px;
+}
+.yur_login_top, .yur_login_bottom{
 	display: flex;
 	flex-direction: row;
-	margin-bottom: 16px;
+	margin-bottom: 10px;
+	margin-left: -12px;
+	margin-right: -12px;
+}
+.yur_login_inn .yur_login_top_block {
+	width: 100%;
+	margin: 0;
+}
+.yur_login_inn input[type=text] {
+	width: 100%;
 }
 .yur_login_top_block {
 	display: flex;
 	flex-direction: column;
-	max-width: 200px;
-	margin-right: 24px;
+	width: 33.3333%;
+	padding-right: 12px;
+	padding-left: 12px;
 }
 .yur_login_top_block input[type=submit] {
     background: #ED5408;
@@ -337,6 +353,7 @@ ul, ol {
     margin-bottom: 16px;
     cursor: pointer;
     margin-top: 36px;
+	max-width: 204px;
 }
 /* product */
 .product_mob_block {
@@ -862,6 +879,9 @@ input[type=number] {
 	.cart_2 {
 		display: block;
 	}
+	.yur_login_top_block {
+		width: 100%;
+	}
 	.burger {
 	    display: flex;
 	    border-left: 1px solid #eee;
@@ -918,6 +938,10 @@ input[type=number] {
 	}
 	.cart_accordion {
 	    height: 78vh;
+	}
+	.yur_login_top_block input[type=submit] {
+		max-width: 100%;
+		width: 100%;
 	}
 	.mobile_login {
 		display: flex;
@@ -977,6 +1001,7 @@ input[type=number] {
 	.yur_login_top_block {
 		margin: 0;
 		max-width: 100%;
+		width: 100%;
 	}
 	.product_mob_block {
 		display: flex;
