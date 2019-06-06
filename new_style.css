@@ -51,6 +51,7 @@
 .yur_login_inn .yur_login_top_block {
     width: 100%;
     margin: 0;
+    max-width: 100%;
 }
 .yur_login_top, .yur_login_bottom {
     display: flex;
@@ -58,6 +59,14 @@
     margin-bottom: 10px;
     margin-left: -12px;
     margin-right: -12px;
+}
+.yur_login input[type=text], .yur_login input[type=password], .yur_login input[type=email] {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 13px 20px;
+    font-size: 14px;
 }
 @media (max-width: 1024px) {
 	.yur_login_top_block {
