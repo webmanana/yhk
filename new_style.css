@@ -80,3 +80,24 @@
 	    width: 100%;
 	}
 }
+.smeta_new {
+    padding: 4px 6px;
+    background: #F15C0B;
+    border-radius: 2px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+.smeta_hit {
+    padding: 4px 6px;
+    background: #389E07;
+    border-radius: 2px;
+    font-size: 11px;
+    line-height: 13px;
+    color: #FFFFFF;
+    margin-left: 10px;
+}
+.product_mob_desc h3 {
+    line-height: 21px;
+}
