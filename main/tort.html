@@ -193,7 +193,7 @@
 							<div class="tort_date_inner">
 								<div class="tort_date_block">
 									<span>Дата</span>
-									<input type='text' class="datepicker-here" data-position="right top" />
+									<input type='text' id="datepicker" class="datepicker-here" data-position="right top" />
 								</div>
 								<div class="tort_date_block">
 									<span>Время</span>
@@ -293,6 +293,10 @@
 
 				DG.marker([61.982418, 129.662109]).addTo(map);
 			});
+		</script>
+		<script type="text/javascript">
+			$('#datepicker').datepicker({autoclose:true});
+			$("#datepicker").datepicker().datepicker("setDate", new Date());
 		</script>
 		<script type="text/javascript">
 			var inputs = document.querySelectorAll( '.inputfile' );
