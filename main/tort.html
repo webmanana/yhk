@@ -180,9 +180,10 @@
 							</div>
 							<div class="tort_info_2">
 								<span class="tort_info_2_desc">С какого адреса вам удобнее забрать заказ?</span>
-								<select>
-								    <option>«Загадка» г. Якутск, ул. Автодорожная. 40</option>
-								    <option>Пункт 2</option>
+								<select id="maps_toggle">
+								    <option data-coordinates="62.033592, 129.758032">«Загадка» г. Якутск, ул. Автодорожная. 40</option>
+								    <option data-coordinates="62.038924, 129.724021">Пункт 2</option>
+									<option data-coordinates="62.023098, 129.722476">Пункт 3</option>
 								</select>
 								<span class="tort_info_2_info">В магазины доставляются торты только до 3 кг.<br>Свыше 3 кг. - только с завода.<br>1500 руб. - аренда подставки</span>
 								<div id="map" style="width:500px; height:400px"></div>
@@ -282,18 +283,73 @@
 		<script src="vendor/foundation/js/app.js"></script>
 		<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 		<script src="vendor/air-datepicker/dist/js/datepicker.min.js"></script>
-		<script type="text/javascript">
-			var map;
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+		<script>
+		ymaps.ready(init);
 
-			DG.then(function () {
-				map = DG.map('map', {
-					center: [61.982418, 129.662109],
-					zoom: 17
-				});
+var myMap;
 
-				DG.marker([61.982418, 129.662109]).addTo(map);
-			});
+function init () {
+    // Параметры карты можно задать в конструкторе.
+    myMap = new ymaps.Map(
+        // ID DOM-элемента, в который будет добавлена карта.
+        'map',
+        // Параметры карты.
+        {
+            // Географические координаты центра отображаемой карты.
+            center: [62.032056, 129.726874],
+            // Масштаб.
+            zoom: 13
+        }, {
+            // Поиск по организациям.
+            searchControlProvider: 'yandex#search'
+		}),
+        myPlacemark = new ymaps.Placemark([62.038924, 129.724021], {
+            // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+            // balloonContentHeader: "Балун метки",
+            // balloonContentBody: "Содержимое <em>балуна</em> метки",
+            // balloonContentFooter: "Подвал",
+            // hintContent: "Хинт метки"
+        }),
+		myPlacemark2 = new ymaps.Placemark([62.033592, 129.758032], {
+            // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+            // balloonContentHeader: "Балун метки",
+            // balloonContentBody: "Содержимое <em>балуна</em> метки",
+            // balloonContentFooter: "Подвал",
+            // hintContent: "Хинт метки"
+        }),
+		myPlacemark3 = new ymaps.Placemark([62.023098, 129.722476], {
+            // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
+            // balloonContentHeader: "Балун метки",
+            // balloonContentBody: "Содержимое <em>балуна</em> метки",
+            // balloonContentFooter: "Подвал",
+            // hintContent: "Хинт метки"
+        });
+		myMap.geoObjects.add(myPlacemark);
+		myMap.geoObjects.add(myPlacemark2);
+		myMap.geoObjects.add(myPlacemark3);
+}
+$("#maps_toggle").change(function() {
+	var arrMap = $( "#maps_toggle option:selected" ).data('coordinates').split(',',2);
+	myMap.setZoom(16);
+	myMap.panTo([+arrMap[0], +arrMap[1]], {
+		// Задержка между перемещениями.
+		delay: 1500
+	});
+	$('.maps_block').removeClass('active');
+	$(this).addClass('active');
+});
+
 		</script>
+		<style>
+			.page_inner h1 {
+				margin: 1em 0 !important;
+			}
+			#map {
+			    width: 100%;
+			    height: 400px;
+			}
+		</style>
 		<script type="text/javascript">
 			$('#datepicker').datepicker({
 				autoclose:true,
