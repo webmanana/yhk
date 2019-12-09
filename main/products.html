@@ -88,7 +88,8 @@
 				</div>
 				<div class="products_wrap">
 					<div class="products_sidebar">
-						<div class="products_menu">
+						<button class="dropdown_menu_toggle" type="button" name="button" data-toggle="dropdown_menu">Все категории</button>
+						<div class="products_menu dropdown-pane" id="dropdown_menu" data-dropdown data-auto-focus="true" data-close-on-click="true" data-close-on-click-inside>
 							<ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
 							  <li class="accordion-item is-active" data-accordion-item>
 							    <a href="#" class="accordion-title">Кекс</a>
@@ -364,7 +365,8 @@
 		<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 		<script type="text/javascript">
 		$(window).on('load resize', function() {
-			if ($(window).width() < 1060) {
+			if ($(window).width() > 960) {
+				$('.products_menu').removeClass('dropdown-pane');
 			}
 		});
 		    $('.partner_slider').slick({
